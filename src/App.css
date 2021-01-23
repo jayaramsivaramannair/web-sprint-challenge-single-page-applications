@@ -10,12 +10,13 @@
   color: greenyellow;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .heroContainer h1 {
   font-family: "Lobster", cursive;
   text-align: center;
-  font-size: 5em;
+  font-size: 5rem;
 }
 
 h1 {
@@ -26,18 +27,82 @@ h1 {
 .heroContainer p {
   font-family: "Lobster", cursive;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .pizzaOrder {
   padding: 5px;
-  margin: 0 auto;
   font-family: "Lobster", cursive;
   background-color: greenyellow;
-  border-radius: 25px;
 }
 
 .pizzaOrder:hover {
   color: greenyellow;
   background-color: black;
+  border: 2px greenyellow solid;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: greenyellow;
+  font-family: "Lobster", cursive;
+  border: 2px solid greenyellow;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.labels {
+  margin: 10px;
+  display: inline-block;
+}
+
+.form h1 {
+  font-size: 3rem;
+}
+
+select {
+  display: block;
+}
+
+input {
+  display: inline-block;
+}
+
+.orderButton {
+  padding: 5px;
+  font-family: "Lobster", cursive;
+  background-color: greenyellow;
+}
+
+.orderButton:hover {
+  color: greenyellow;
+  background-color: black;
+  border: 2px greenyellow solid;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 1px;
+  font-size: 0.5rem;
+}
+
+.homeButton {
+  padding: 5px;
+  font-family: "Lobster", cursive;
+  background-color: greenyellow;
+}
+
+.homeButton:hover {
+  color: greenyellow;
+  background-color: black;
+  border: 2px greenyellow solid;
 }
