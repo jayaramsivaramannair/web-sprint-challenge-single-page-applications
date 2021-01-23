@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.home {
+  max-height: 50%;
+  max-width: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heroContainer {
+  border: 2px solid black;
+  height: 400px;
+  max-width: 100%;
+  color: greenyellow;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heroContainer h1 {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-size: 5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  color: greenyellow;
+  font-family: "Lobster", cursive;
+}
+
+.heroContainer p {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.pizzaOrder {
+  padding: 5px;
+  margin: 0 auto;
+  font-family: "Lobster", cursive;
+  background-color: greenyellow;
+  border-radius: 25px;
+}
+
+.pizzaOrder:hover {
+  color: greenyellow;
+  background-color: black;
 }
