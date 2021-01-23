@@ -22,6 +22,7 @@
 h1 {
   color: greenyellow;
   font-family: "Lobster", cursive;
+  text-align: right;
 }
 
 .heroContainer p {

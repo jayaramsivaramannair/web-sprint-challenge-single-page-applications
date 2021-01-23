@@ -3,13 +3,14 @@ import {useHistory} from 'react-router-dom';
 
 const Form = () => {
     const orderQty = [1,2,3,4,5,6,7,8,9,10];
+    
     const history = useHistory();
     const clickHandler = () => {
         history.goBack();
     }
     return (
         <div className = "form">
-            <button className="homeButton" onClick = {clickHandler}>Back to Home</button>
+            <button className="homeButton" onClick={clickHandler}>Back to Home</button>
             <h1>Build Your Own Pizza</h1>
             <form>
                 <h2>Choice of Size</h2>
@@ -43,47 +44,61 @@ const Form = () => {
                 </label>
                 <h2>Add Toppings</h2>
                 <p>Choose up to 10</p>
-                <label> Pepperoni
+                <label> 
                     <input type = 'checkbox'/>
+                    Pepperoni
                 </label>
-                <label> Sausage
+                <label> 
                     <input type = 'checkbox'/>
+                    Sausage
                 </label>
-                <label> Canadian Bacon
+                <label> 
                     <input type = 'checkbox'/>
+                    Canadian Bacon
                 </label>
-                <label> Spicy Italian Sausage
+                <label> 
                     <input type = 'checkbox'/>
+                    Spicy Italian Sausage
                 </label>
-                <label> Grilled Chicken
+                <label> 
                     <input type = 'checkbox'/>
+                    Grilled Chicken
                 </label>
-                <label> Onions
+                <label> 
                     <input type = 'checkbox'/>
+                    Onions
                 </label>
-                <label> Green Pepper
+                <label> 
                     <input type = 'checkbox'/>
+                    Green Pepper
                 </label>
-                <label> Diced Tomatoes
+                <label> 
                     <input type = 'checkbox'/>
+                    Diced Tomatoes
                 </label>
-                <label> Black Olives
+                <label> 
                     <input type = 'checkbox'/>
+                    Black Olives
                 </label>
-                <label> Roasted Garlic
+                <label> 
                     <input type = 'checkbox'/>
+                    Roasted Garlic
                 </label>
-                <label> Artichoke Hearts
+                <label> 
                     <input type = 'checkbox'/>
+                    Artichoke Hearts
                 </label>
-                <label> Three Cheese
+                <label> 
                     <input type = 'checkbox'/>
+                    Three Cheese
                 </label>
-                <label> Pineapple
+                <label> 
                     <input type = 'checkbox'/>
+                    Pineapple
                 </label>
-                <label> Extra Cheese
+                <label> 
                     <input type = 'checkbox'/>
+                    Extra Cheese
                 </label>
                 <h2>Special Instructions</h2>
                 <label>
