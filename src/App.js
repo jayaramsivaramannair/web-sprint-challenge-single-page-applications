@@ -11,15 +11,15 @@ const App = () => {
     <div>
       <h1>Lambda Eats</h1>
       <Switch>
-        <Route path="/Form">
-            <Form />
-          </Route>
-          <Route path="/Confirmation">
-            <Confirmation/>
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+        <Route path="/pizza">
+          <Form />
+        </Route>
+        <Route path="/Confirmation">
+          <Confirmation/>
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
       </Switch>
     </div>
   );

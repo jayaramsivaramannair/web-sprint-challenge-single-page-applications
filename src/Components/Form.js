@@ -5,12 +5,16 @@ const Form = () => {
     const orderQty = [1,2,3,4,5,6,7,8,9,10];
     
     const history = useHistory();
-    const clickHandler = () => {
+    const clickHandlerForHome = () => {
         history.goBack();
+    }
+
+    const clickHandlerForFinal = () => {
+        history.push('/Confirmation');
     }
     return (
         <div className = "form">
-            <button className="homeButton" onClick={clickHandler}>Back to Home</button>
+            <button className="homeButton" onClick={clickHandlerForHome}>Back to Home</button>
             <h1>Build Your Own Pizza</h1>
             <form>
                 <h2>Choice of Size</h2>
@@ -107,12 +111,12 @@ const Form = () => {
                 <label className="labels">
                     <select>
                         {orderQty.map((order) => {
-                            return <option>{order}</option>
+                            return <option key={order}>{order}</option>
                         })}
                     </select>
                 </label>
             </form>
-            <button className="orderButton">Order Total</button>
+            <button className="orderButton" onClick={clickHandlerForFinal}>Order Total</button>
         </div>
     )
 }

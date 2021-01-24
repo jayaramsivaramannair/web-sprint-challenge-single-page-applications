@@ -93,7 +93,7 @@ h2 {
 
 p {
   margin-top: 1px;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .homeButton {
@@ -103,6 +103,32 @@ p {
 }
 
 .homeButton:hover {
+  color: greenyellow;
+  background-color: black;
+  border: 2px greenyellow solid;
+}
+
+.confirmation {
+  font-family: "Lobster", cursive;
+  color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.returnButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.returnButtons button {
+  margin-right: 5px;
+  padding: 5px;
+  font-family: "Lobster", cursive;
+  background-color: greenyellow;
+}
+
+.returnButtons button:hover {
   color: greenyellow;
   background-color: black;
   border: 2px greenyellow solid;

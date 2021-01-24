@@ -7,7 +7,7 @@ const Home = () => {
             <div className="heroContainer">
                 <h1>Hungry Coder = Bad Code</h1>
                 <p>You Need Refueling</p>
-                <Link to="/Form">
+                <Link to="/pizza">
                     <button className="pizzaOrder">
                         Order Pizza
                     </button>
