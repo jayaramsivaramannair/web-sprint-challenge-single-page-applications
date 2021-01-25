@@ -79,6 +79,7 @@ input {
   padding: 5px;
   font-family: "Lobster", cursive;
   background-color: greenyellow;
+  margin-top: 20px;
 }
 
 .orderButton:hover {
@@ -89,6 +90,7 @@ input {
 
 h2 {
   margin-bottom: 0px;
+  color: greenyellow;
 }
 
 p {
@@ -132,4 +134,8 @@ p {
   color: greenyellow;
   background-color: black;
   border: 2px greenyellow solid;
+}
+
+input {
+  margin-left: 10px;
 }
