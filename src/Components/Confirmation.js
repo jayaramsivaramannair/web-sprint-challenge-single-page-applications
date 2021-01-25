@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useRouteMatch} from 'react-router-dom';
 
 const Confirmation = (props) => {
     const {data, resetOrder} = props;
@@ -8,6 +8,10 @@ const Confirmation = (props) => {
         resetOrder();
         history.goBack();
     }
+
+    const match = useRouteMatch();
+    console.log(match);
+
     const clickHandlerForHome = () => {
         resetOrder();
         history.push('/');

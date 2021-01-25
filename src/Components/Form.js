@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useRouteMatch} from 'react-router-dom';
 import * as yup from 'yup';
 
 const schema = yup.object().shape({ 
@@ -39,6 +39,9 @@ const Form = (props) => {
         size: '',
         instructions: '',
     })
+
+    const match = useRouteMatch();
+    console.log(match);
 
     const {updateFunction, submitFunction, orderQty, form} = props;
     const [disabled, setDisabled] = useState(true);
@@ -204,7 +207,7 @@ const Form = (props) => {
                 <label> Postal Code :
                     <input onChange = {change} value = {form.code} name="code" type = 'number' placeholder="Enter Postal Code"/>
                 </label>
-                <button disabled = {disabled} className="orderButton">{disabled ? "Fill Order Details" : "Submit Order"}</button>
+                <button disabled = {disabled} className="orderButton">{disabled ? "Fill Order Details" : `Submit - Order Total $${17.99 * form.quantity}`}</button>
             </form>
         </div>
     )

@@ -31,6 +31,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+   `The Primary use case for useRouteMatch is to construct dynamic nested paths`
 1. How would you explain form validation to someone who has never programmed before?
    `Form validation is the process which ensures that when a user is submitting an online form, the form submission cannot be made without inputting information into the required fields.`
    `Form validation also ensures that information input into certain fields are in the correct format such as information entered into email input field or phone number input into the phone number field.`

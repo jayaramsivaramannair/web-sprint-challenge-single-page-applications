@@ -4,6 +4,7 @@ import axios from 'axios';
 import Home from './Components/Home.js';
 import Form from './Components/Form.js';
 import Confirmation from './Components/Confirmation.js';
+import {Container, Row} from 'reactstrap';
 
 import "./App.css";
 
@@ -64,20 +65,22 @@ const App = () => {
   }
 
   return (
-    <div>
+    <Container>
       <h1>Lambda Eats</h1>
-      <Switch>
-        <Route path="/pizza">
-          <Form updateFunction = {updateForm} submitFunction = {submit} orderQty = {orderQty} form = {form}/>
-        </Route>
-        <Route path="/Confirmation">
-          <Confirmation data={orderData} resetOrder = {resetOrder}/>
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </div>
+      <Row>
+        <Switch>
+          <Route path="/pizza">
+            <Form updateFunction = {updateForm} submitFunction = {submit} orderQty = {orderQty} form = {form}/>
+          </Route>
+          <Route path="/Confirmation">
+            <Confirmation data={orderData} resetOrder = {resetOrder}/>
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Row>
+    </Container>
   );
 };
 export default App;
