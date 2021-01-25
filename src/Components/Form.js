@@ -7,12 +7,22 @@ const schema = yup.object().shape({
     houseNumber: yup.string().required('House/Apartment Number is Required'),
     streetAddress: yup.string().required('Street Name is Required'),
     city: yup.string().required("City Name is required"),
-    code: yup.number().required('Zip Code is required'),
+    code: yup.string().required('Zip Code is required'),
     sauce: yup.string().oneOf(['Original Red', 'Garlic Ranch', 'BBQ Sauce', 'Spanish Alfredo'], "You must select the type of sauce"),
     size: yup.string().oneOf(['Small', 'Medium', 'Large', 'Extra Large'], 'You must select the size of pizza')
 })
 
 const Form = (props) => {
+    const [errors, setErrors] = useState({
+        customerName: '', 
+        houseNumber: '', 
+        streetAddress: '', 
+        city: '',
+        code: '',
+        sauce: '',
+        size: ''
+    })
+
     const {updateFunction, submitFunction, orderQty, form} = props;
     const [disabled, setDisabled] = useState(true);
     const history = useHistory();
@@ -20,10 +30,19 @@ const Form = (props) => {
         history.goBack();
     }
 
+    const setFormErrors = (name, value) => {
+        yup.reach(schema, name).validate(value)
+        .then(() => setErrors({...errors, [name]: ''}))
+        .catch((err) => {
+            setErrors({...errors, [name]: err.errors[0]})
+        })
+    }
+
     const change = (evt) => {
         const {checked, value, name, type} = evt.target;
         const updatedValue = type === 'checkbox' ? checked : value;
         updateFunction(name, updatedValue);
+        setFormErrors(name, updatedValue);
     }
 
     const onSubmit = (evt) => {
@@ -158,7 +177,16 @@ const Form = (props) => {
                 <label> Postal Code :
                     <input onChange = {change} value = {form.code} name="code" type = 'number' placeholder="Enter Postal Code"/>
                 </label>
-                    <button disabled = {disabled} className="orderButton">{disabled ? "Complete Order" : "Submit Order"}</button>
+                <button disabled = {disabled} className="orderButton">{disabled ? "Complete Order" : "Submit Order"}</button>
+                <div style={{color:'red'}}>
+                    <p>{errors.customerName}</p>
+                    <p>{errors.city}</p>
+                    <p>{errors.code}</p>
+                    <p>{errors.houseNumber}</p>
+                    <p>{errors.streetAddress}</p>
+                    <p>{errors.size}</p>
+                    <p>{errors.sauce}</p>
+                </div>
             </form>
         </div>
     )
