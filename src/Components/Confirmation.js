@@ -21,8 +21,8 @@ const Confirmation = (props) => {
 
     return (
         <div className = "confirmation">
-            <p>Your Fresh Pizza is on its way!</p>
-            <p>Your Order Summary:</p>
+            <h2>Your Fresh Pizza is on its way!</h2>
+            <h3>Your Order Summary:</h3>
             <p>Customer Name: {data.customerName}</p>
             <p>{`Delivery Address: ${data.houseNumber}, ${data.streetAddress}, ${data.city}`}</p>
             <p>Pizza Size: {data.size}</p>

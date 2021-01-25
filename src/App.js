@@ -54,6 +54,9 @@ const App = () => {
         setForm(orderInitialValues);
         setOrderData(order);
       })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 
   const resetOrder = () => {

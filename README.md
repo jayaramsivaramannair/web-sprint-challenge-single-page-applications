@@ -32,7 +32,12 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
 1. How would you explain form validation to someone who has never programmed before?
+   `Form validation is the process which ensures that when a user is submitting an online form, the form submission cannot be made without inputting information into the required fields.`
+   `Form validation also ensures that information input into certain fields are in the correct format such as information entered into email input field or phone number input into the phone number field.`
+
 1. In 1-2 sentences, define end to end testing.
+   `End to End testing is a software testing method which tests different flows in an application.`
+   `End to End testing is done to ensure that the application works as expected for the end user from beginning to end.`
 
 ## Instructions
 
