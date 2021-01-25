@@ -139,3 +139,12 @@ p {
 input {
   margin-left: 10px;
 }
+
+.toppings {
+  border: 1px solid greenyellow;
+  padding: 5px;
+}
+
+.toppings li {
+  font-size: 0.75rem;
+}

@@ -27,7 +27,23 @@ const Confirmation = (props) => {
             <p>{`Delivery Address: ${data.houseNumber}, ${data.streetAddress}, ${data.city}`}</p>
             <p>Pizza Size: {data.size}</p>
             <p>Pizza Sauce: {data.sauce}</p>
-            <p>Toppings Added: </p>
+            <div className="toppings">
+                <p>Toppings Added: </p>
+                {data.pepperoni ? <li>Pepperoni</li> : ''}
+                {data.sausage ? <li>Sausage</li> : ''}
+                {data.canadianBacon ? <li>Canadian Bacon</li> : ''}
+                {data.italianSausage ? <li>Spicy Italian Sausage</li> : ''}
+                {data.grilledChicken ? <li>Grilled Chicken</li> : ''}
+                {data.onions ? <li>Onions</li> : ''}
+                {data.greenPepper ? <li>Green Pepper</li> : ''}
+                {data.dicedTomatoes ? <li>Diced Tomatoes</li> : ''}
+                {data.blackOlives ? <li>Black Olives</li> : ''}
+                {data.roastedGarlic ? <li>Roasted Garlic</li> : ''}
+                {data.artichokeHearts ? <li>Artichoke Hearts</li> : ''}
+                {data.threeCheese ? <li>Three Cheese</li> : ''}
+                {data.pineapple ? <li>Pineapple</li> : ''}
+                {data.extraCheese ? <li>Extra Cheese</li> : ''}
+            </div>
             <p>Special Instructions: {specialInstructions}</p>
             <div className="returnButtons">
                 <button onClick={clickHandlerForHome}>

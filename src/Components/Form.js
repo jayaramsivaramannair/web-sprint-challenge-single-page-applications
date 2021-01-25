@@ -8,6 +8,22 @@ const schema = yup.object().shape({
     streetAddress: yup.string().required('Street Name is Required'),
     city: yup.string().required("City Name is required"),
     code: yup.string().required('Zip Code is required'),
+    instructions: yup.string().required('Enter "None" if no special instructions'),
+    pepperoni: yup.boolean().oneOf([true, false]),
+    quantity: yup.number().oneOf([1,2,3,4,5,6,7,8,9,10]),
+    sausage: yup.boolean().oneOf([true, false]),
+    canadianBacon: yup.boolean().oneOf([true, false]),
+    italianSausage: yup.boolean().oneOf([true, false]),
+    grilledChicken: yup.boolean().oneOf([true, false]),
+    onions: yup.boolean().oneOf([true, false]),
+    greenPepper: yup.boolean().oneOf([true, false]),
+    dicedTomatoes: yup.boolean().oneOf([true, false]),
+    blackOlives: yup.boolean().oneOf([true, false]),
+    roastedGarlic: yup.boolean().oneOf([true, false]),
+    artichokeHearts: yup.boolean().oneOf([true, false]),
+    threeCheese: yup.boolean().oneOf([true, false]),
+    pineapple: yup.boolean().oneOf([true, false]),
+    extraCheese: yup.boolean().oneOf([true, false]),
     sauce: yup.string().oneOf(['Original Red', 'Garlic Ranch', 'BBQ Sauce', 'Spanish Alfredo'], "You must select the type of sauce"),
     size: yup.string().oneOf(['Small', 'Medium', 'Large', 'Extra Large'], 'You must select the size of pizza')
 })
@@ -20,7 +36,8 @@ const Form = (props) => {
         city: '',
         code: '',
         sauce: '',
-        size: ''
+        size: '',
+        instructions: '',
     })
 
     const {updateFunction, submitFunction, orderQty, form} = props;
@@ -61,6 +78,16 @@ const Form = (props) => {
             <button className="homeButton" onClick={clickHandlerForHome}>Back to Home</button>
             <h1>Build Your Own Pizza</h1>
             <form onSubmit = {onSubmit}>
+                <div style={{color:'red'}}>
+                    <p>{errors.customerName}</p>
+                    <p>{errors.city}</p>
+                    <p>{errors.code}</p>
+                    <p>{errors.houseNumber}</p>
+                    <p>{errors.streetAddress}</p>
+                    <p>{errors.size}</p>
+                    <p>{errors.sauce}</p>
+                    <p>{errors.instructions}</p>
+                </div>
                 <h2>Choice of Size</h2>
                 <p>Required</p>
                 <label className="labels">
@@ -177,16 +204,7 @@ const Form = (props) => {
                 <label> Postal Code :
                     <input onChange = {change} value = {form.code} name="code" type = 'number' placeholder="Enter Postal Code"/>
                 </label>
-                <button disabled = {disabled} className="orderButton">{disabled ? "Complete Order" : "Submit Order"}</button>
-                <div style={{color:'red'}}>
-                    <p>{errors.customerName}</p>
-                    <p>{errors.city}</p>
-                    <p>{errors.code}</p>
-                    <p>{errors.houseNumber}</p>
-                    <p>{errors.streetAddress}</p>
-                    <p>{errors.size}</p>
-                    <p>{errors.sauce}</p>
-                </div>
+                <button disabled = {disabled} className="orderButton">{disabled ? "Fill Order Details" : "Submit Order"}</button>
             </form>
         </div>
     )
