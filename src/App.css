@@ -155,3 +155,19 @@ input {
 .toppings li {
   font-size: 0.75rem;
 }
+
+img {
+  padding-top: 25px;
+  max-width: 150px;
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useHistory, useRouteMatch} from 'react-router-dom';
 import * as yup from 'yup';
+import pizza from "../Assets/pizza.svg";
 
 const schema = yup.object().shape({ 
     customerName: yup.string().required('Name is required').min(2, "Names must be atleast 2 Characters Long"),
@@ -79,6 +80,9 @@ const Form = (props) => {
     return (
         <div className = "form">
             <button className="homeButton" onClick={clickHandlerForHome}>Back to Home</button>
+            <div>
+                <img alt="pizza" src={pizza} className="pizzaImage"/>
+            </div>
             <h1>Build Your Own Pizza</h1>
             <form onSubmit = {onSubmit}>
                 <div style={{color:'red'}}>
