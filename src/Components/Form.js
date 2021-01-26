@@ -85,16 +85,6 @@ const Form = (props) => {
             </div>
             <h1>Build Your Own Pizza</h1>
             <form onSubmit = {onSubmit}>
-                <div style={{color:'red'}}>
-                    <p>{errors.customerName}</p>
-                    <p>{errors.city}</p>
-                    <p>{errors.code}</p>
-                    <p>{errors.houseNumber}</p>
-                    <p>{errors.streetAddress}</p>
-                    <p>{errors.size}</p>
-                    <p>{errors.sauce}</p>
-                    <p>{errors.instructions}</p>
-                </div>
                 <h2>Choice of Size</h2>
                 <p>Required</p>
                 <label className="labels">
@@ -211,6 +201,16 @@ const Form = (props) => {
                 <label> Postal Code :
                     <input onChange = {change} value = {form.code} name="code" type = 'number' placeholder="Enter Postal Code"/>
                 </label>
+                <div style={{color:'red'}}>
+                    <p>{errors.customerName}</p>
+                    <p>{errors.city}</p>
+                    <p>{errors.code}</p>
+                    <p>{errors.houseNumber}</p>
+                    <p>{errors.streetAddress}</p>
+                    <p>{errors.size}</p>
+                    <p>{errors.sauce}</p>
+                    <p>{errors.instructions}</p>
+                </div>
                 <button disabled = {disabled} className="orderButton">{disabled ? "Fill Order Details" : `Submit - Order Total $${17.99 * form.quantity}`}</button>
             </form>
         </div>
